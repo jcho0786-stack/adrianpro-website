@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Adrianpro</title>
+<meta name="description" content="Request a quote for laminate tubes · contact details · location">
+<link rel="alternate" hreflang="ko" href="../contact.html">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main>
+  <div class="page-hero">
+    <div class="wrap reveal">
+      <div class="crumbs"><a href="index.html">HOME</a><span>/</span><span>CONTACT</span></div>
+      <h1>Request a quote</h1>
+      <p class="lead">Fill in the form below and our team will get back to you.</p>
+    </div>
+  </div>
+
+  <section id="rfq">
+    <div class="wrap split contact-split">
+      <form class="panel form reveal" id="rfq-form" novalidate>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <div class="field"><label for="company">Company<span class="req">*</span></label><input id="company" name="company" required autocomplete="organization"></div>
+        <div class="field"><label for="name">Name<span class="req">*</span></label><input id="name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="phone">Phone<span class="req">*</span></label><input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="+1 000 000 0000"></div>
+        <div class="field"><label for="email">Email<span class="req">*</span></label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field full">
+          <label>Inquiry type</label>
+          <div class="check-group">
+            <label><input type="checkbox" name="type" value="ABL tube"><span>ABL tube</span></label>
+            <label><input type="checkbox" name="type" value="PBL tube"><span>PBL tube</span></label>
+            <label><input type="checkbox" name="type" value="Sample request"><span>Sample request</span></label>
+            <label><input type="checkbox" name="type" value="Factory visit"><span>Factory visit</span></label>
+            <label><input type="checkbox" name="type" value="Other"><span>Other</span></label>
+          </div>
+        </div>
+        <div class="field full"><label for="diameter">Tube diameter</label>
+          <select id="diameter" name="diameter">
+            <option value="">Select / not sure</option><option>Ø13.7–19 mm</option><option>Ø22–25 mm</option><option>Ø28–30 mm</option><option>Ø35–40 mm</option><option>Ø45–60 mm</option><option>Need advice</option>
+          </select></div>
+        <div class="field full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us anything you know: formula type, volume, print colours and so on."></textarea></div>
+        <div class="field full" style="grid-template-columns:auto 1fr;align-items:start;gap:10px">
+          <input type="checkbox" id="agree" required style="width:18px;height:18px;margin-top:3px;accent-color:var(--ink)">
+          <label for="agree" style="font-weight:400;font-size:14px;color:var(--ink-2)">I agree to the collection and use of my personal information (company, name, phone, email) to respond to this inquiry. It will be retained and deleted in accordance with applicable law.<span class="req">*</span></label>
+        </div>
+        <div class="field full" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+          <span class="form-note">* Required</span>
+          <button class="btn btn-primary" type="submit">Send inquiry <span class="arrow">→</span></button>
+        </div>
+        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+      </form>
+
+      <div class="reveal">
+        <dl class="contact-info">
+          <div class="row"><dt>Phone</dt><dd><a class="mono" href="tel:+82437507073" style="font-size:20px" data-co="telIntl"></a></dd></div>
+          <div class="row"><dt>Fax</dt><dd class="mono" data-co="faxIntl"></dd></div>
+          <div class="row"><dt>Email</dt><dd><a href="mailto:john@adrianpro.co.kr" style="color:var(--copper);font-weight:600">john@adrianpro.co.kr</a></dd></div>
+          <div class="row"><dt>Address</dt><dd><span data-co="addrEn"></span><br><span style="font-size:13px;color:var(--ink-3)" data-co="addrKo"></span></dd></div>
+          <div class="row"><dt>Hours</dt><dd>Mon–Fri 08:30 – 17:30 KST <span style="color:var(--ink-3)">(closed weekends &amp; Korean holidays)</span></dd></div>
+        </dl>
+        <div class="map-box">
+          <iframe title="Adrianpro location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%9D%8C%EC%84%B1%EA%B5%B0%20%EA%B8%88%EC%99%95%EC%9D%8D%20%EA%B8%88%EC%9D%BC%EB%A1%9C284%EB%B2%88%EA%B8%B8%2023-5&z=15&hl=en&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer id="site-footer"></footer>
+<script src="../assets/main.js"></script>
+</body>
+</html>
