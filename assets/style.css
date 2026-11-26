@@ -116,6 +116,8 @@ section { padding: clamp(64px, 10vw, 120px) 0; }
 .hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.25), transparent 22%); pointer-events: none; }
 .prod-card .visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
 a.prod-card:hover .visual img { transform: scale(1.04); }
+.prod-card .visual img.zoom { transform-origin: 50% 54%; transform: scale(1.75); }
+a.prod-card:hover .visual img.zoom { transform: scale(1.82); }
 .hero-visual .tag {
   position: absolute; left: 20px; top: 20px; padding: 8px 12px; border-radius: 999px;
   background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); color: #E8E2D8;
@@ -129,6 +131,8 @@ a.prod-card:hover .visual img { transform: scale(1.04); }
 .stat .num { font: 500 clamp(28px, 3.4vw, 40px)/1.1 var(--mono); letter-spacing: -0.03em; }
 .stat .num small { font-size: .5em; color: var(--ink-3); margin-left: 4px; }
 .stat .label { color: var(--ink-2); font-size: 14px; margin-top: 8px; }
+
+.prod-photo { width: 100%; height: auto; margin-top: 28px; border-radius: 18px; aspect-ratio: 1232 / 848; object-fit: cover; }
 
 /* ---------- Lineup band ---------- */
 .lineup { padding: clamp(48px, 7vw, 88px) 0 0; }
