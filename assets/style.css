@@ -114,8 +114,8 @@ section { padding: clamp(64px, 10vw, 120px) 0; }
 }
 .hero-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 52% 50%; }
 .hero-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.25), transparent 22%); pointer-events: none; }
-.prod-card .visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(2.1); transition: transform .6s ease; }
-a.prod-card:hover .visual img { transform: scale(2.2); }
+.prod-card .visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+a.prod-card:hover .visual img { transform: scale(1.04); }
 .hero-visual .tag {
   position: absolute; left: 20px; top: 20px; padding: 8px 12px; border-radius: 999px;
   background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); color: #E8E2D8;
@@ -129,6 +129,15 @@ a.prod-card:hover .visual img { transform: scale(2.2); }
 .stat .num { font: 500 clamp(28px, 3.4vw, 40px)/1.1 var(--mono); letter-spacing: -0.03em; }
 .stat .num small { font-size: .5em; color: var(--ink-3); margin-left: 4px; }
 .stat .label { color: var(--ink-2); font-size: 14px; margin-top: 8px; }
+
+/* ---------- Lineup band ---------- */
+.lineup { padding: clamp(48px, 7vw, 88px) 0 0; }
+.lineup-top { padding-top: clamp(32px, 5vw, 56px); }
+.lineup-fig { position: relative; margin: 0; border-radius: 24px; overflow: hidden; background: #2B2B2D; }
+.lineup-fig img { width: 100%; height: auto; aspect-ratio: 1420 / 460; object-fit: cover; }
+.lineup-fig figcaption { position: absolute; left: 20px; bottom: 18px; display: inline-flex; align-items: center; gap: 10px; padding: 9px 14px; border-radius: 999px; background: rgba(14,30,44,.72); color: #fff; font-size: 13px; font-weight: 600; backdrop-filter: blur(6px); }
+.lineup-fig figcaption .mono { font-size: 11px; letter-spacing: .14em; color: var(--copper-2); }
+@media (max-width: 860px) { .lineup-fig img { aspect-ratio: auto; height: 240px; object-position: 20% 50%; } .lineup-fig figcaption { left: 12px; bottom: 12px; font-size: 12px; } }
 
 /* ---------- Page hero (sub pages) ---------- */
 .page-hero { padding: clamp(56px, 8vw, 96px) 0 clamp(40px, 6vw, 64px); border-bottom: 1px solid var(--line); }
@@ -158,7 +167,7 @@ a.card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -24px rgba(2
 
 /* Product card w/ visual */
 .prod-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
-.prod-card .visual { aspect-ratio: 16/10; background: linear-gradient(160deg, #EDE9E2, #DCD6CC); display: grid; place-items: center; position: relative; overflow: hidden; }
+.prod-card .visual { aspect-ratio: 4/3; background: linear-gradient(160deg, #EDE9E2, #DCD6CC); display: grid; place-items: center; position: relative; overflow: hidden; }
 .prod-card .visual svg { width: 62%; }
 .prod-card .body { padding: 28px 28px 32px; flex: 1; display: flex; flex-direction: column; }
 .prod-card .body p { flex: 1; }
