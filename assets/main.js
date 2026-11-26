@@ -179,11 +179,20 @@ function rfqForm() {
         method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(payload),
       });
       const json = await res.json().catch(() => ({}));
+      if (/activat/i.test(json.message || '')) {
+        // FormSubmit 최초 1회: 받는 메일(COMPANY.email)로 활성화 메일이 발송됨
+        status.className = 'form-status show';
+        status.innerHTML = LANG === 'en'
+          ? `<b>One-time activation needed.</b> An activation email was sent to ${COMPANY.email}. Click “Activate Form” in that email, then submit again.`
+          : `<b>처음 한 번만 활성화가 필요합니다.</b> ${COMPANY.email} 메일함(스팸함 포함)에 온 FormSubmit 메일에서 <b>Activate Form</b>을 누른 뒤 다시 보내 주세요.`;
+        return;
+      }
       if (!res.ok || String(json.success) !== 'true') throw new Error(json.message || res.status);
       status.className = 'form-status show';
       status.innerHTML = T.done;
       form.reset();
     } catch (err) {
+      console.warn('[RFQ] submit failed:', err && err.message);
       const mailto = `mailto:${COMPANY.email}?subject=${encodeURIComponent(T.subject(d.get('company'), d.get('name')))}&body=${encodeURIComponent(body)}`;
       status.className = 'form-status error show';
       status.innerHTML = T.fail(`<a href="${mailto}" style="text-decoration:underline">${COMPANY.email}</a>`);
