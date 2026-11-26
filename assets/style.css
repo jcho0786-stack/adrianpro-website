@@ -299,6 +299,13 @@ td .mono { color: var(--ink); }
   td:nth-child(3) { font-size: 14px; color: var(--ink-2); }
 }
 
+.policy { max-width: 860px; }
+.policy h2 { font-size: 20px; margin: 40px 0 12px; }
+.policy h2:first-child { margin-top: 0; }
+.policy p, .policy li { color: var(--ink-2); }
+.policy ul { padding-left: 20px; margin: 8px 0; display: grid; gap: 6px; }
+.foot-bottom a { color: #A9B3BF; text-decoration: underline; text-underline-offset: 3px; }
+
 /* FAQ */
 .faq { border-top: 1px solid var(--line); }
 .faq details { border-bottom: 1px solid var(--line); padding: 22px 0; }

@@ -19,7 +19,7 @@ const BASE = LANG === 'en' ? '../' : '';   // 영문 페이지에서 assets 폴�
 const T = {
   ko: {
     nav: [['index.html', '홈'], ['about.html', '회사소개'], ['products.html', '제품'], ['quality.html', '설비·품질'], ['process.html', 'OEM 프로세스'], ['contact.html', '문의']],
-    homeAria: '에이드리안프로 홈', rfq: '견적 문의', menu: '메뉴 열기', switchLabel: 'EN', switchTitle: 'English',
+    homeAria: '에이드리안프로 홈', privacy: '개인정보처리방침', rfq: '견적 문의', menu: '메뉴 열기', switchLabel: 'EN', switchTitle: 'English',
     footIntro: '라미네이트 튜브 전문 기업.<br>전 자동화 설비와 엄격한 품질 관리로 품질과 납기를 지킵니다.',
     links: '바로가기', contact: '연락처', address: '주소', addr: COMPANY.addrKo, addrSub: COMPANY.addrEn,
     tel: COMPANY.tel, fax: COMPANY.fax, bottomRight: COMPANY.nameKo,
@@ -33,7 +33,7 @@ const T = {
   },
   en: {
     nav: [['index.html', 'Home'], ['about.html', 'About'], ['products.html', 'Products'], ['quality.html', 'Facility & Quality'], ['process.html', 'OEM Process'], ['contact.html', 'Contact']],
-    homeAria: 'Adrianpro home', rfq: 'Request a Quote', menu: 'Open menu', switchLabel: 'KO', switchTitle: '한국어',
+    homeAria: 'Adrianpro home', privacy: 'Privacy Policy', rfq: 'Request a Quote', menu: 'Open menu', switchLabel: 'KO', switchTitle: '한국어',
     footIntro: 'Laminate tube manufacturer.<br>Fully automated lines and strict quality control for consistent quality and on-time delivery.',
     links: 'Menu', contact: 'Contact', address: 'Address', addr: COMPANY.addrEn, addrSub: COMPANY.addrKo,
     tel: COMPANY.telIntl, fax: COMPANY.faxIntl, bottomRight: 'Made in Korea',
@@ -96,7 +96,7 @@ function renderChrome() {
           <div><h5>${T.address}</h5><p>${T.addr}</p><p style="margin-top:8px;font-size:12px;color:#7D8896">${T.addrSub}</p></div>
         </div>
         <div class="foot-bottom">
-          <span>© ${new Date().getFullYear()} ${COMPANY.nameEn} All rights reserved.</span>
+          <span>© ${new Date().getFullYear()} ${COMPANY.nameEn} All rights reserved. · <a href="privacy.html">${T.privacy}</a></span>
           <span>${T.bottomRight}</span>
         </div>
       </div>`;
